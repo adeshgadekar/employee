@@ -3,7 +3,6 @@ package com.project.springboot.employees.controller;
 import com.project.springboot.employees.entity.Employee;
 import com.project.springboot.employees.request.EmployeeRequest;
 import com.project.springboot.employees.service.EmployeeService;
-import com.project.springboot.employees.service.EmployeeServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -19,10 +18,10 @@ import java.util.List;
 @Tag(name = "Employee Rest endpoints", description = "Operations related with employees")
 public class EmployeeRestController {
 
-    private EmployeeServiceImpl employeeService;
+    private EmployeeService employeeService;
 
     @Autowired
-    public EmployeeRestController(EmployeeServiceImpl theEmployeeService) {
+    public EmployeeRestController(EmployeeService theEmployeeService) {
         employeeService = theEmployeeService;
     }
 
