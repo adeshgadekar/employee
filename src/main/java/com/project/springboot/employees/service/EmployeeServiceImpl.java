@@ -28,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public Employee findById(long Id) {
         Optional <Employee> result = employeeRepository.findById(Id);
-        Employee  employee = null;
+        Employee  employee;
         if(result.isPresent()){
             employee =  result.get();
         }
